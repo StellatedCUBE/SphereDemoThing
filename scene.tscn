@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bg5i762wseths"]
+
+[ext_resource type="Shader" uid="uid://b1q3oqtl8tg1b" path="res://ball.gdshader" id="1_nxogm"]
+[ext_resource type="Texture2D" uid="uid://c5amtx74de3ma" path="res://texture.jpg" id="2_3253y"]
+[ext_resource type="Script" uid="uid://c3qesk4bsoas" path="res://roll.gd" id="3_3253y"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u3cyc"]
+shader = ExtResource("1_nxogm")
+shader_parameter/inverse_transform = Projection(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+
+[node name="Scene" type="Node2D" unique_id=913791215]
+
+[node name="Ball" type="Sprite2D" parent="." unique_id=2092387121]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_u3cyc")
+position = Vector2(-200, -200)
+scale = Vector2(0.5, 1)
+texture = ExtResource("2_3253y")
+script = ExtResource("3_3253y")
